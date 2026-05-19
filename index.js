@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-const password = "pass123";
+const password = "pass12345678";
 var hashedPassword = "";
 // Encryption of the string password
 bcrypt.genSalt(10, function (err, Salt) {
@@ -17,6 +17,7 @@ bcrypt.genSalt(10, function (err, Salt) {
       if (!isMatch) {
         // If password doesn't match the following
         // message will be sent
+        
         console.log(hashedPassword + " is not encryption of " + password);
       }
     });
